@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using FHIND_MVC.Services;
 
 namespace FHIND_MVC
 {
@@ -27,6 +28,7 @@ namespace FHIND_MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ITodoItemService, FakeTodoItemService>();
             // Add framework services.
             services.AddMvc();
         }
