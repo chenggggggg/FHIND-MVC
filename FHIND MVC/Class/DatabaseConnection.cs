@@ -40,7 +40,7 @@ namespace FHIND_MVC.Class
 
         public Student GetStudentInfo(int StudentID)
         {
-            Student leering = new Student();
+            //Student leering = new Student();
 
             string query = "SELECT * FROM Student WHERE (StudentID = @StudentID)";
 
