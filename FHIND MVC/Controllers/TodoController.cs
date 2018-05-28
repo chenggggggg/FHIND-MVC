@@ -12,12 +12,7 @@ namespace FHIND_MVC.Controllers
     {
         private readonly ITodoItemService _todoItemService;
 
-        public TodoController(ITodoItemService todoItemService)
-        {
-            _todoItemService = todoItemService;
-        }
-
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             var items = await _todoItemService.GetIncompleteItemsAsync();
 
@@ -26,7 +21,13 @@ namespace FHIND_MVC.Controllers
                 Items = items
             };
 
-            return View();
+            return View(model);
         }
+
+        public TodoController(ITodoItemService todoItemService)
+        {
+            _todoItemService = todoItemService;
+        }
+
     }
 }
