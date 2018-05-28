@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using ClassLibraryFHIND.Entities;
 
-namespace ClassLibraryFHIND
+namespace ClassLibraryFHIND.Data
 {
     public class DatabaseConnection
     {

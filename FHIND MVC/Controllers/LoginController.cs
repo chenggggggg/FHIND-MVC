@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FHIND_MVC.Models;
+using ClassLibraryFHIND.Data;
 
 namespace FHIND_MVC.Controllers
 {
@@ -16,9 +17,21 @@ namespace FHIND_MVC.Controllers
         
         [HttpPost]
 
-        public ActionResult Authorize()
+        public ActionResult Authorize(LoginViewModel Model)
         {
-            //Authorize user and redirect if authorized...
+            DatabaseConnection database = new DatabaseConnection();
+
+            if (Model.Email.Length > 0 && Model.Wachtwoord.Length > 0)
+            {
+                int UserID = database.GetUserID(Model.Email, Model.Wachtwoord);
+
+                if (UserID != -1)
+                {
+                    //Redirect("");
+                    Console.WriteLine("Userid found!");
+                }
+            }            
+            //Redirect if authorized...
             return View();
         }
     }
