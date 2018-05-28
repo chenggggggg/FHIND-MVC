@@ -18,7 +18,7 @@ namespace FHIND_MVC.Controllers
 
         public ActionResult Authorize()
         {
-            
+            //Authorize user and redirect if authorized...
             return View();
         }
     }
