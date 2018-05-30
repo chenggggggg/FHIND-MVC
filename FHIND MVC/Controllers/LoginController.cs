@@ -15,8 +15,6 @@ namespace FHIND_MVC.Controllers
             return View();
         }
         
-        [HttpPost]
-
         public ActionResult Authorize(LoginViewModel Model)
         {
             DatabaseConnection database = new DatabaseConnection();
@@ -27,11 +25,10 @@ namespace FHIND_MVC.Controllers
 
                 if (UserID != -1)
                 {
-                    //Redirect("");
+                    //Redirect
                     Console.WriteLine("Userid found!");
                 }
             }            
-            //Redirect if authorized...
             return View();
         }
     }

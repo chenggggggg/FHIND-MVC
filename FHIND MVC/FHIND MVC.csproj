@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibraryFHIND\ClassLibraryFHIND.csproj" />
+    <ProjectReference Include="..\ClassLibraryFHIND2\ClassLibraryFHIND.csproj" />
   </ItemGroup>
 
   <ItemGroup>
