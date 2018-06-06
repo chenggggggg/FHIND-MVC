@@ -32,7 +32,13 @@ namespace ClassLibraryFHIND.Entities
 
         public Student(int id, string email, string wachtwoord, string voornaam, string achternaam, int studentnummer, int leerjaar)
         {
-
+            StudentID = id;
+            Email = email;
+            Wachtwoord = wachtwoord;
+            Voornaam = voornaam;
+            Achternaam = achternaam;
+            Studentnummer = studentnummer;
+            Leerjaar = leerjaar;
         }
         
     }
