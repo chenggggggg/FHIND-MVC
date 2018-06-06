@@ -34,11 +34,10 @@ namespace ClassLibraryFHIND.Data
             {
                 throw ex;
             }
-
             conn.Close();
             return UserID;
         }
-        //new method
+
         public List<Student> GetAllStudents()
         {
             List<Student> students = new List<Student>();
