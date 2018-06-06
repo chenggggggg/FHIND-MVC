@@ -55,6 +55,19 @@ namespace ClassLibraryFHIND.Data
             return leering;
         }
         //new method
+        public List<Student> GetAllStudents()
+        {
+            List<Student> students = new List<Student>();
+
+            string query = "SELECT * FROM Student";
+
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Close();
+
+            return students;
+        }
 
     }
 }

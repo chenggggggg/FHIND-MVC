@@ -1,4 +1,7 @@
+@using ClassLibraryFHIND.Entities
+
 @Model List<Student>
+
 
 @{
     Layout = null;
@@ -133,10 +136,15 @@
             </div>
             <div class="classroom" id="class209">
                 <p>2.09</p>
-                @foreach(ClassLibraryFHIND.Entities.Student student in Model)
+                @using (Html.BeginForm("Students", "Main", FormMethod.Post))
                 {
-                    
-                }
+                    <table>
+                        @foreach (Student student in Model)
+                        {
+                            <input onclick="openPopup();" type="image" src="MediaFiles/UserIcon5.jpg" name="">
+                        }                        
+                    </table>
+                }                
                 
             </div>
             <div class="classroom">

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ClassLibraryFHIND.Data;
+using ClassLibraryFHIND.Entities;
 
 namespace FHIND_MVC.Controllers
 {
@@ -10,12 +12,29 @@ namespace FHIND_MVC.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            DatabaseConnection database = new DatabaseConnection();
+
+            List<Student> students = database.GetAllStudents(); // SELECT * FROM student
+
+            return View(students);
         }
 
-        public IActionResult Load()
+        [HttpGet]
+        public IActionResult Students()
+
         {
-            return View();
+            DatabaseConnection database = new DatabaseConnection();
+
+            List<Student> students = database.GetAllStudents(); // SELECT * FROM student
+
+            if (students.Count > 0)
+            {
+                return View(students);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
