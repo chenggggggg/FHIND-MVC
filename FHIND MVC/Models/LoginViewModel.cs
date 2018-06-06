@@ -18,6 +18,7 @@ namespace FHIND_MVC.Models
         public string Wachtwoord { get; set; }
 
         [Required(ErrorMessage = "Email and password incorrect.")]
-        public string Incorrect { get; set; }
+
+        public string IncorrectUser { get; set; }
     }
 }

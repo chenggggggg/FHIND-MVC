@@ -31,11 +31,12 @@ namespace FHIND_MVC.Controllers
 
                 if (UserID != -1)
                 {
-                    return RedirectToAction("Main", model);
+                    return RedirectToAction("Index", "Main");
                 }
                 else
                 {
-
+                    model.IncorrectUser = "Email or password is incorrect.";
+                    return View("Index", model);
                 }
             }
 
