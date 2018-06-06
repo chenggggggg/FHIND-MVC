@@ -33,6 +33,10 @@ namespace FHIND_MVC.Controllers
                 {
                     return RedirectToAction("Main", model);
                 }
+                else
+                {
+
+                }
             }
 
             return View("Index");
