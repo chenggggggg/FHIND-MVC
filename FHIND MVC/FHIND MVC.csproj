@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Login\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ClassLibraryFHIND2\ClassLibraryFHIND.csproj" />
   </ItemGroup>
 

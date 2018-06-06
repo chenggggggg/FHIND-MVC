@@ -1,0 +1,602 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	background-color: #ededed;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+.female {color: red;}
+
+#dimmer {
+		background:#000;
+		opacity:0.5;
+		position:fixed;
+		top:0;
+		left:0;
+		width: 75%;
+		height: 100%;
+		display: none;
+		z-index:100500;--really big number
+		MsFilter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);--IE
+		filter: alpha(opacity=50);
+		MozOpacity: 0.5;--FF
+		KhtmlOpacity: 0.5;
+}
+
+/* MODAL POP-UP */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.profile-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px; /* Could be more or less, depending on screen size */
+}
+
+.profile-content img {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+.addFriend {
+	background: url(MediaFiles/addFriend.png);
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+	border: none;
+	background-size: auto 49px;
+	margin: 2%;
+}
+
+.newMessage {
+	background: url(MediaFiles/newMessage.png);
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+	border: none;
+	background-size: auto 49px;
+	margin: 2%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* DIRECT MESSAGING POP-UP */
+.modalMssg {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px; /* Could be more or less, depending on screen size */
+    height: 500px;
+}
+
+.messages {
+	position: sticky;
+	float: right;
+	height: 400px;
+	width: 340px;
+	border: 1px solid;
+	border-color: #e8ebed;
+	margin-top: -46%;
+	padding: 2%;
+	display: grid;
+	grid-template-columns: 300px 30px;
+	grid-template-rows: 40px 300px 40px;
+}
+
+.messages > input {
+	grid-row-start: 3;
+	grid-row-end: last-line;
+
+}
+
+.messages > input[type="text"] {
+	float: left;
+	width: 250px;
+	height: 42px;
+	font-size: 20px;
+	padding: 0 15px;
+	border: 1px solid;
+	border-color: #e8ebed ;
+	background-color: #eceff1;
+	border-radius: 7%;	
+}
+
+.messages > input[type="submit"] {
+	border: none;
+	border-radius: 3px;
+	background-color: rgb(149, 115, 146);
+	font-size: 15px;
+	width: 50px;
+	height: 30px;
+	justify-self: center;
+}
+
+.messageBubbles {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.FriendName {
+	place-self: center;
+
+	grid-row-start: 1;
+	grid-row-end: 2; 
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.friendList {
+	position: sticky;
+	border: 1px solid;
+	border-color: #e8ebed;
+	width: 200px;
+	height: 250px;
+	overflow: auto;
+	display: grid;
+	grid-template-columns: 60px 50px;
+	grid-gap: 3%;
+	padding: 2%;
+	margin-top: 6%;
+	margin-right: -2%;
+}
+
+.friendList img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+/* PROFILE */
+
+#editProfileForm {
+	display: none;
+}
+
+.editProfileForm {
+	display: grid;
+	grid-template-columns: 140px 140px;
+  	grid-template-rows: 40px 40px 40px 40px 40px;
+  	grid-row-gap: 5%;
+  	grid-column-gap: 10%;
+	margin-right: 2%;
+	margin-left: 5%;
+	align-self: center;
+
+}
+
+.editProfileForm > input[type="text"] {
+	border: none;
+	border-bottom: 2px solid rgb(39, 39, 39);
+}
+
+.editProfileForm > label {
+	align-self: center;
+}
+
+.formheader {
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  text-align: center;
+}
+
+
+.profile {
+	background-color: white;
+	position: relative;
+	float: right;
+	margin-right: 0;
+	top:0;	
+	width: 25%;
+	height: 100%;
+	bottom: 0;
+	overflow: auto;
+}
+
+.profile > h1 {
+	padding: 3%;
+	text-align: center;
+}
+
+.editProfileButton {
+	background-image: url(MediaFiles/editIcon1.png);
+	background-repeat: no-repeat;
+	background-size: 30px, 30px;
+	height: 32px;
+	width: 32px;
+	float: right;
+	display: inline-block;
+	margin-top: -14%;
+	margin-right: 10%;
+	border: none;
+	cursor: pointer;
+}
+
+.profile > h2 {
+	text-align: center;
+}
+
+.userIcon {
+	position: relative;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* profile photo animations */
+
+.userIcon:hover {
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+
+.userIcon:hover + .buttoneditIcon {
+	display: block;
+}
+
+.buttoneditIcon:hover{
+	display: block;
+}
+
+.buttoneditIcon {
+	display: none;
+}
+
+.editIcon {
+	position: relative;
+	border-radius: 50%;
+	background-color: black;
+	width: 20%;
+	height: auto;
+	float: right;
+	cursor: pointer;
+	margin-top: -20%;
+	margin-bottom: 0%;
+	margin-right: 20%;
+}
+
+.userInfo {
+	margin-left: 5%;
+	margin-top: 15%;
+	text-align: left;
+	
+}
+
+#userDisplay {
+	display: block;
+}
+
+/* log off button animations */
+
+.draw-border {
+  -webkit-box-shadow: inset 0 0 0 4px rgb(39, 39, 39);
+          box-shadow: inset 0 0 0 4px rgb(39, 39, 39);
+  color: white;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: rgb(149, 115, 146);
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: rgb(149, 115, 146);
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.btLogOff {
+  background: none;
+  color: rgb(39, 39, 39);
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+
+.btLogOff:focus {
+  
+}
+
+.logOffBt{
+	position: absolute;
+	margin-left: 35%;
+	align-self: center;
+	display: block;
+}
+
+/* END PROFILE */
+
+/* NAV BAR */
+
+.Nav {
+	background-color: rgb(39, 39, 39);
+	position: fixed;
+	float: left;
+	top: 0;
+	width: 75%;
+	height: 15%;
+}
+
+.messageIcon {
+	height: 30px;
+	width: auto;
+	padding: 2%;
+	background: url(MediaFiles/messageIcon.png);
+	background-repeat: no-repeat;
+	background-size: auto 29px;
+	position: relative;
+	border: none;
+
+}
+
+.friendsIcon {
+	height: 30px;
+	width: auto;
+	padding: 2%;
+	margin-left: 2%;
+	background: url(MediaFiles/friendsIcon.png);
+	background-repeat: no-repeat;
+	background-size: auto 29px;
+	position: relative;
+	border: none;
+}
+
+.Nav input[type="text"] {
+	border: none;
+	border-bottom: 3px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	width: 20%;
+	font-size: 18px;
+	position: relative;
+	margin-top: 1%;
+	margin-left: 58%;
+
+}
+
+.searchBar {
+	float: right;
+}
+
+.searchIcon {
+	height: 30px;
+	width: auto;
+	padding: 2%;
+	float: right;
+	margin-right: 4%;
+	margin-top: 2.5%;
+	background: url(MediaFiles/searchIcon.png);
+	background-repeat: no-repeat;
+	background-size: auto 29px;
+	position: relative;
+	border: none;
+}
+
+.dropdown-content.show {
+	display: block;
+}
+
+.dropdown {
+	margin-top: 5.5%;
+	margin-left: 2%;
+	display: block;
+	background-color: transparent;
+	position: absolute;
+}
+
+.dropdown-content {
+	color: white;
+	height: 250px;
+	width: 200px;
+	background-color: rgb(39, 39, 39);
+	border: none;
+	position: absolute;
+	display: none;
+}
+
+.dropdown-content label {
+	padding: 10%;
+	margin-top: 20%;
+	line-height: 200%;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  
+  border-bottom: 15px solid rgb(39, 39, 39);
+  margin-left: 2.5%;
+
+  display: none;
+}
+
+
+/* END NAV BAR */
+
+/* MAIN MENU */
+
+.mainMenu{
+	position: sticky;
+	background-color: #ededed;
+	float: left;
+	margin-top: 5.5%;
+	width: 75%;
+	height: 89.4%;
+	overflow: scroll;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	float: right;
+	margin: 1%;
+}
+
+.floorNr {
+	height: 20px;
+	margin: 2%;
+	width: 20px;
+	background: transparent;
+	border: 1px solid black;
+	border-radius: 10%;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 5%;
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+.classroom {
+	height: 300px;
+	width: 300px;
+	background-color: rgb(149, 115, 146);
+	margin: 5%;
+	padding: 2%;
+	overflow: auto;
+}
+
+.classroom > input[type="image"] {
+	height: 80px;
+	margin: 2%;
+	width: 80px;
+	border-radius: 50%;
+}
+
+.classroom > a {
+	height: 80px;
+	margin: 2%;
+	width: auto;
+	border-radius: 50%;
+}
+
+/* profile popup styling */
+.popup__inner {
+	max-height: 100%;
+	background-color: #f2f2f2;
+	width: 90%;
+  	max-width: 30em;
+  	margin: 3em auto 0;
+  	padding-bottom: 1.5em;
+  	border-radius: 2px;
+  	box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+	}
+
+.popup { // gray area  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  display: none;
+}
+
+.profile__image {
+	width: 8em;
+	border-radius: 50%;
+	display: block;
+}

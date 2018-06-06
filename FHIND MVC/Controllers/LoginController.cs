@@ -14,21 +14,27 @@ namespace FHIND_MVC.Controllers
         {
             return View();
         }
-        
-        public ActionResult Authorize(LoginViewModel Model)
+
+        public IActionResult Main()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Authorize(LoginViewModel model)
         {
             DatabaseConnection database = new DatabaseConnection();
 
-            if (Model.Email.Length > 0 && Model.Wachtwoord.Length > 0)
+            if (model.Email != null && model.Wachtwoord != null)
             {
-                int UserID = database.GetUserID(Model.Email, Model.Wachtwoord);
+                int UserID = database.GetUserID(model.Email, model.Wachtwoord);
 
                 if (UserID != -1)
                 {
-                    //Redirect
-                    Console.WriteLine("Userid found!");
+                    return RedirectToAction("Main", model);
                 }
-            }            
+            }
+
             return View();
         }
     }
