@@ -35,7 +35,7 @@ namespace FHIND_MVC.Controllers
                 }
             }
 
-            return View();
+            return View("Index");
         }
     }
 }
