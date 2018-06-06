@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FHIND MVC", "FHIND MVC\FHIND MVC.csproj", "{B94BE102-2838-4869-8F1B-76AC89E44CB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryFHIND", "ClassLibraryFHIND2\ClassLibraryFHIND.csproj", "{321EBD9E-34D7-498F-815A-4A9B3D004FD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryFHIND", "ClassLibraryFHIND2\ClassLibraryFHIND.csproj", "{876CC606-6EE3-43DF-ACE4-FD9D4363FC2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B94BE102-2838-4869-8F1B-76AC89E44CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B94BE102-2838-4869-8F1B-76AC89E44CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B94BE102-2838-4869-8F1B-76AC89E44CB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{321EBD9E-34D7-498F-815A-4A9B3D004FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{321EBD9E-34D7-498F-815A-4A9B3D004FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{321EBD9E-34D7-498F-815A-4A9B3D004FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{321EBD9E-34D7-498F-815A-4A9B3D004FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{876CC606-6EE3-43DF-ACE4-FD9D4363FC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{876CC606-6EE3-43DF-ACE4-FD9D4363FC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{876CC606-6EE3-43DF-ACE4-FD9D4363FC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{876CC606-6EE3-43DF-ACE4-FD9D4363FC2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

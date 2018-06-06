@@ -10,7 +10,11 @@ namespace FHIND_MVC.Controllers
     {
         public IActionResult Index()
         {
-            //something.
+            return View();
+        }
+
+        public IActionResult Load()
+        {
             return View();
         }
     }
