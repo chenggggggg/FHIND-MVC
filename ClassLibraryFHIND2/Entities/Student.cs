@@ -10,6 +10,10 @@ namespace ClassLibraryFHIND.Entities
     {
         public int StudentID { get; set; }
 
+        public string Email { get; set; }
+
+        public string Wachtwoord { get; set; }
+
         public string Voornaam { get; set; }
 
         public string Achternaam { get; set; }
@@ -26,9 +30,11 @@ namespace ClassLibraryFHIND.Entities
 
         public int SpecialisatieID { get; set; }
 
-        public string Email { get; set; }
+        public Student(int id, string email, string wachtwoord, string voornaam, string achternaam, int studentnummer, int leerjaar)
+        {
 
-        public string Wachtwoord { get; set; }
+        }
+        
     }
 }
 

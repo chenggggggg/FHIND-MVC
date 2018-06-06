@@ -38,22 +38,6 @@ namespace ClassLibraryFHIND.Data
             conn.Close();
             return UserID;
         }
-
-        public Student GetStudentInfo(int StudentID)
-        {
-            Student leering = new Student();
-
-            string query = "SELECT * FROM Student WHERE (StudentID = @StudentID)";
-
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@StudentID", StudentID);
-
-            conn.Close();
-
-            return leering;
-        }
         //new method
         public List<Student> GetAllStudents()
         {
@@ -64,6 +48,24 @@ namespace ClassLibraryFHIND.Data
             conn.Open();
 
             SqlCommand cmd = new SqlCommand(query, conn);
+
+            try
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Student student = new Student();
+
+                        UserID = reader.GetInt32(0);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
             conn.Close();
 
             return students;

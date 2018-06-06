@@ -138,12 +138,10 @@
                 <p>2.09</p>
                 @using (Html.BeginForm("Students", "Main", FormMethod.Post))
                 {
-                    <table>
-                        @foreach (Student student in Model)
-                        {
-                            <input onclick="openPopup();" type="image" src="MediaFiles/UserIcon5.jpg" name="">
-                        }                        
-                    </table>
+                    @foreach (Student student in Model)
+                    {
+                        <input onclick="openPopup();" type="image" src="MediaFiles/UserIcon5.jpg" name="@student.Voornaam">
+                    }     
                 }                
                 
             </div>

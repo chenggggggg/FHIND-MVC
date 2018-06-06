@@ -18,23 +18,5 @@ namespace FHIND_MVC.Controllers
 
             return View(students);
         }
-
-        [HttpGet]
-        public IActionResult Students()
-
-        {
-            DatabaseConnection database = new DatabaseConnection();
-
-            List<Student> students = database.GetAllStudents(); // SELECT * FROM student
-
-            if (students.Count > 0)
-            {
-                return View(students);
-            }
-            else
-            {
-                return View();
-            }
-        }
     }
 }
