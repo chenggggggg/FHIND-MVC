@@ -55,16 +55,34 @@ namespace ClassLibraryFHIND.Data
                 {
                     while (reader.Read())
                     {
-                        /*
+
+
                         int studentid = reader.GetInt32(0);
                         string email = reader.GetString(1);
                         string wachtwoord = reader.GetString(2);
                         string voornaam = reader.GetString(3);
                         string achternaam = reader.GetString(4);
-                        string tussenvoegsel = reader.GetString(5);
+                        string tussenvoegsel = string.Empty;
+                        if (!reader.IsDBNull(5))
+                        {
+                            tussenvoegsel = reader.GetString(5);
+                        }
                         int studentnummer = reader.GetInt32(6);
-                        Student student = new Student(); 
-                        */
+                        int leerjaar = reader.GetInt32(7);
+                        string specialiteiten = string.Empty;
+                        if (!reader.IsDBNull(8))
+                        {
+                            specialiteiten = reader.GetString(8);
+                        }
+                        int profielid = -1;
+                        if (!reader.IsDBNull(9))
+                        {
+                            profielid = reader.GetInt32(9);
+                        }               
+                        int specialisatieid = reader.GetInt32(10);
+                        
+                        Student student = new Student(studentid, email, wachtwoord, voornaam, achternaam, tussenvoegsel, studentnummer, leerjaar, specialiteiten, profielid, specialisatieid);
+                        students.Add(student);                        
                     }
                 }
             }
