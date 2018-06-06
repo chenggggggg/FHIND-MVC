@@ -1,0 +1,95 @@
+@model IEnumerable<ClassLibraryFHIND.Entities.Student>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voornaam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Achternaam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tussenvoegsel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Studentnummer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Leerjaar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Specialiteiten)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProfielID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpecialisatieID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Wachtwoord)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Voornaam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Achternaam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tussenvoegsel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Studentnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Leerjaar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialiteiten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfielID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialisatieID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wachtwoord)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
