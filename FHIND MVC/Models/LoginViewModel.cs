@@ -16,9 +16,7 @@ namespace FHIND_MVC.Models
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "This field is required.")]
         public string Wachtwoord { get; set; }
-
-        [Required(ErrorMessage = "Email and password incorrect.")]
-
+        
         public string IncorrectUser { get; set; }
     }
 }
