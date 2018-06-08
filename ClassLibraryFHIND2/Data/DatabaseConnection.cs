@@ -9,7 +9,10 @@ namespace ClassLibraryFHIND.Data
 {
     public class DatabaseConnection
     {
-        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Maatwerk\Freaky Day\FHIND MVC\FHIND MVC\App_Data\DatabaseFD.mdf;Integrated Security = True";
+        //Calvin:
+        //private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Maatwerk\Freaky Day\FHIND MVC\FHIND MVC\App_Data\DatabaseFD.mdf;Integrated Security = True";
+        //Kylie:
+        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kylie\Documents\Git\FHIND-MVC\Database\DatabaseFD.mdf;Integrated Security = True";
         private SqlConnection conn = new SqlConnection(connectionString);
 
         public int GetUserID(string email, string wachtwoord)
