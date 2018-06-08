@@ -57,8 +57,6 @@ namespace ClassLibraryFHIND.Data
                 {
                     while (reader.Read())
                     {
-
-
                         int studentid = reader.GetInt32(0);
                         string email = reader.GetString(1);
                         string wachtwoord = reader.GetString(2);
@@ -97,6 +95,5 @@ namespace ClassLibraryFHIND.Data
 
             return students;
         }
-
     }
 }

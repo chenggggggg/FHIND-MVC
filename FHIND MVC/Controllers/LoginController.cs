@@ -31,6 +31,7 @@ namespace FHIND_MVC.Controllers
 
                 if (UserID != -1)
                 {
+
                     return RedirectToAction("Index", "Main");
                 }
                 else

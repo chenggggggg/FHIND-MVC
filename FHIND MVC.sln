@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FHIND MVC", "FHIND MVC\FHIND MVC.csproj", "{B94BE102-2838-4869-8F1B-76AC89E44CB1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryFHIND", "ClassLibraryFHIND2\ClassLibraryFHIND.csproj", "{876CC606-6EE3-43DF-ACE4-FD9D4363FC2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{39BFF67B-8956-40AA-B87C-76979095BA0F}"
+	ProjectSection(SolutionItems) = preProject
+		Database\DatabaseFD.mdf = Database\DatabaseFD.mdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

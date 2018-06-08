@@ -30,11 +30,11 @@ a {
 		width: 75%;
 		height: 100%;
 		display: none;
-		z-index:100500;--really big number
-		MsFilter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);--IE
+		z-index:100500;
+		MsFilter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 		filter: alpha(opacity=50);
-		MozOpacity: 0.5;--FF
-		KhtmlOpacity: 0.5;
+		/*MozOpacity: 0.5;
+		KhtmlOpacity: 0.5;*/
 }
 
 /* MODAL POP-UP */
@@ -70,23 +70,23 @@ a {
 }
 
 .addFriend {
-	background: url(MediaFiles/addFriend.png);
-	height: 50px;
-	width: 50px;
-	background-repeat: no-repeat;
-	border: none;
-	background-size: auto 49px;
-	margin: 2%;
+    background: url("https://i.imgur.com/iQXMCWM.png");
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    border: none;
+    background-size: auto 49px;
+    margin: 2%;
 }
 
 .newMessage {
-	background: url(MediaFiles/newMessage.png);
-	height: 50px;
-	width: 50px;
-	background-repeat: no-repeat;
-	border: none;
-	background-size: auto 49px;
-	margin: 2%;
+    background: url("https://i.imgur.com/Dxm39FM.png");
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    border: none;
+    background-size: auto 49px;
+    margin: 2%;
 }
 
 /* The Close Button */
@@ -261,17 +261,16 @@ a {
 }
 
 .editProfileButton {
-	background-image: url(MediaFiles/editIcon1.png);
-	background-repeat: no-repeat;
-	background-size: 30px, 30px;
-	height: 32px;
-	width: 32px;
-	float: right;
-	display: inline-block;
-	margin-top: -14%;
-	margin-right: 10%;
-	border: none;
-	cursor: pointer;
+    background-image: url("https://i.imgur.com/7QCvpJ7.png");
+    background-repeat: no-repeat;
+    background-size: 30px, 30px;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    margin-top: -14%;
+    margin-right: 10%;
+    border: none;
+    cursor: pointer;
 }
 
 .profile > h2 {
@@ -390,10 +389,6 @@ a {
   text-align: center;
 }
 
-.btLogOff:focus {
-  
-}
-
 .logOffBt{
 	position: absolute;
 	margin-left: 35%;
@@ -415,27 +410,26 @@ a {
 }
 
 .messageIcon {
-	height: 30px;
-	width: auto;
-	padding: 2%;
-	background: url(MediaFiles/messageIcon.png);
-	background-repeat: no-repeat;
-	background-size: auto 29px;
-	position: relative;
-	border: none;
-
+    height: 30px;
+    width: auto;
+    padding: 2%;
+    background: url("https://i.imgur.com/x3696Ju.png");
+    background-repeat: no-repeat;
+    background-size: auto 29px;
+    position: relative;
+    border: none;
 }
 
 .friendsIcon {
-	height: 30px;
-	width: auto;
-	padding: 2%;
-	margin-left: 2%;
-	background: url(MediaFiles/friendsIcon.png);
-	background-repeat: no-repeat;
-	background-size: auto 29px;
-	position: relative;
-	border: none;
+    height: 30px;
+    width: auto;
+    padding: 2%;
+    margin-left: 2%;
+    background: url("https://i.imgur.com/ycTzGsI.png");
+    background-repeat: no-repeat;
+    background-size: auto 29px;
+    position: relative;
+    border: none;
 }
 
 .Nav input[type="text"] {
@@ -458,17 +452,17 @@ a {
 }
 
 .searchIcon {
-	height: 30px;
-	width: auto;
-	padding: 2%;
-	float: right;
-	margin-right: 4%;
-	margin-top: 2.5%;
-	background: url(MediaFiles/searchIcon.png);
-	background-repeat: no-repeat;
-	background-size: auto 29px;
-	position: relative;
-	border: none;
+    height: 30px;
+    width: auto;
+    padding: 2%;
+    float: right;
+    margin-right: 4%;
+    margin-top: 2.5%;
+    background: url("https://i.imgur.com/O7mE8am.png");
+    background-repeat: no-repeat;
+    background-size: auto 29px;
+    position: relative;
+    border: none;
 }
 
 .dropdown-content.show {
@@ -585,7 +579,7 @@ a {
   	box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
 	}
 
-.popup { // gray area  
+.popup {   
   position: fixed;
   width: 100%;
   height: 100%;

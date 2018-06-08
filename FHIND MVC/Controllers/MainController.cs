@@ -18,5 +18,14 @@ namespace FHIND_MVC.Controllers
 
             return View(students);
         }
+        /*
+        public IActionResult Students()
+        {
+            //database get studentinfo()
+
+
+            return View();
+        }
+        */
     }
 }
