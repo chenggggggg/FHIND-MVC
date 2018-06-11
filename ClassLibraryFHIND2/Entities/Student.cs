@@ -26,11 +26,11 @@ namespace ClassLibraryFHIND.Entities
 
         public string Specialiteiten { get; set; }
 
-        public int ProfielID { get; set; }
+        public string ProfielNaam { get; set; }
 
-        public int SpecialisatieID { get; set; }
+        public string SpecialisatieNaam { get; set; }
 
-        public Student(int id, string email, string wachtwoord, string voornaam, string achternaam, string tussenvoegsel, int studentnummer, int leerjaar, string specialiteiten, int profielid, int specialisatieid)
+        public Student(int id, string email, string wachtwoord, string voornaam, string achternaam, string tussenvoegsel, int studentnummer, int leerjaar, string specialiteiten, string profielid, string specialisatieid)
         {
             StudentID = id;
             Email = email;
@@ -41,9 +41,16 @@ namespace ClassLibraryFHIND.Entities
             Studentnummer = studentnummer;
             Leerjaar = leerjaar;
             Specialiteiten = specialiteiten;
+<<<<<<< HEAD
             ProfielID = profielid;
             SpecialisatieID = specialisatieid;
         }        
+=======
+            ProfielNaam = profielid;
+            SpecialisatieNaam = specialisatieid;
+        }
+        
+>>>>>>> 30db553039a7762f271a49025b9ce95889851b06
     }
 }
 
