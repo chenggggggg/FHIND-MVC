@@ -32,8 +32,8 @@
                     <h2 style="text-align: center;"> <label id="naam">  </label></h2>
                     <h2>Year: </h2> <label id="jaar"> </label>
                     <h2>Profile: </h2> <label id="profiel"></label>
+                    <h2>Specialization: </h2> <label id="specialisatie"></label>
                     <h2>Specialty: </h2> <label id="specialiteit"></label>
-                    <h2>specialization: </h2> <label id="specialisatie"></label>
                 </form>
                 <button class="addFriend"></button>
                 <button class="newMessage"></button>
@@ -140,7 +140,7 @@
                         <p>2.09</p>
                             @foreach (Student student in Model)
                             {
-                                <input onclick="openPopup('@student.Voornaam','@student.Leerjaar', '@student.Specialiteiten');" type="image" src="https://i.imgur.com/4L8zz6L.png">
+                                <input onclick="openPopup('@student.Voornaam', '@student.Achternaam', '@student.Leerjaar', '@student.ProfielID', '@student.SpecialisatieID', '@student.Specialiteiten' );" type="image" src="https://i.imgur.com/4L8zz6L.png">
                             }
 
                     </div>
@@ -187,10 +187,12 @@
             var span2 = document.getElementsByClassName("close")[1];
 
             // When the user clicks on the button, open the modal
-            function openPopup(naam, jaar, profiel) {
+            function openPopup(naam, jaar, profiel, specialisatie, specialiteit) {
                 document.getElementById('naam').innerHTML = naam;
                 document.getElementById('jaar').innerHTML = jaar;
-                document.getElementById('specialiteit').innerHTML = profiel;
+                document.getElementById('profiel').innerHTML = profiel;
+                document.getElementById('specialisatie').innerHTML = specialisatie;
+                document.getElementById('specialiteit').innerHTML = specialiteit;
 
                 if (modal.style.display === "none") {
                     modal.style.display = "block";
