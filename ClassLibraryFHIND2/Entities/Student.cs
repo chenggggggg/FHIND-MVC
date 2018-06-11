@@ -42,10 +42,18 @@ namespace ClassLibraryFHIND.Entities
             Leerjaar = leerjaar;
             Specialiteiten = specialiteiten;
             ProfielNaam = profielid;
+<<<<<<< HEAD
             SpecialisatieNaam = specialisatieid;               
             ProfielNaam = profielid;
             SpecialisatieNaam = specialisatieid;
         }        
+=======
+            SpecialisatieNaam = specialisatieid;      
+            ProfielNaam = profielid;
+            SpecialisatieNaam = specialisatieid;
+        }
+        
+>>>>>>> 3367f137ecb7911cef0f860417adb2813334eb1b
     }
 }
 
