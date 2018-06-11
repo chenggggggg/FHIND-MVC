@@ -78,7 +78,7 @@ a {
     }
 
 .addFriend {
-    background: url(MediaFiles/addFriend.png);
+    background: url("https://i.imgur.com/iQXMCWM.png");
     height: 50px;
     width: 50px;
     background-repeat: no-repeat;
@@ -88,7 +88,7 @@ a {
 }
 
 .newMessage {
-    background: url(MediaFiles/newMessage.png);
+    background: url("https://i.imgur.com/Dxm39FM.png");
     height: 50px;
     width: 50px;
     background-repeat: no-repeat;
@@ -265,7 +265,7 @@ a {
     }
 
 .editProfileButton {
-    background-image: url(MediaFiles/editIcon1.png);
+    background-image: url("https://i.imgur.com/7QCvpJ7.png");
     background-repeat: no-repeat;
     background-size: 30px, 30px;
     height: 32px;
@@ -429,7 +429,7 @@ a {
     height: 30px;
     width: auto;
     padding: 2%;
-    background: url(MediaFiles/messageIcon.png);
+    background: url("https://i.imgur.com/x3696Ju.png");
     background-repeat: no-repeat;
     background-size: auto 29px;
     position: relative;
@@ -441,7 +441,7 @@ a {
     width: auto;
     padding: 2%;
     margin-left: 2%;
-    background: url(MediaFiles/friendsIcon.png);
+    background: url("https://i.imgur.com/ycTzGsI.png");
     background-repeat: no-repeat;
     background-size: auto 29px;
     position: relative;
@@ -473,7 +473,7 @@ a {
     float: right;
     margin-right: 4%;
     margin-top: 2.5%;
-    background: url(MediaFiles/searchIcon.png);
+    background: url("https://i.imgur.com/O7mE8am.png");
     background-repeat: no-repeat;
     background-size: auto 29px;
     position: relative;
