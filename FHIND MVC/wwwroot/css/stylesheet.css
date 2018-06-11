@@ -62,10 +62,10 @@ a {
     width: 450px; /* Could be more or less, depending on screen size */
 }
 
-    .profile-content label {
-        float: left;
-        margin-left: 40%;
-        margin-top: -10%;
+.profile-content label {
+    float: left;
+    margin-left: 40%;
+    margin-top: -10%;
     }
 
     .profile-content img {
