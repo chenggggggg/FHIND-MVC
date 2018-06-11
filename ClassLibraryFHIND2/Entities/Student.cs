@@ -43,8 +43,7 @@ namespace ClassLibraryFHIND.Entities
             Specialiteiten = specialiteiten;
             ProfielID = profielid;
             SpecialisatieID = specialisatieid;
-        }
-        
+        }        
     }
 }
 
