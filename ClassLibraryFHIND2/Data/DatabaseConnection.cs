@@ -45,7 +45,7 @@ namespace ClassLibraryFHIND.Data
         {
             List<Student> students = new List<Student>();
 
-            string query = "SELECT * FROM Student";
+            string query = "SELECT Student.StudentID, Student.email, Student.wachtwoord, Student.voornaam, Student.achternaam, Student.tussenvoegsel, Student.studentnummer, Student.leerjaar, Student.specialiteiten, Profiel.ProfielNaam, Specialisaties.SpecialisatieNaam FROM Student INNER JOIN Profiel ON Student.ProfielID = Profiel.ProfielID INNER JOIN Specialisaties on Student.SpecialisatieID = Specialisaties.SpecialisatieID";
 
             conn.Open();
 
@@ -74,14 +74,18 @@ namespace ClassLibraryFHIND.Data
                         {
                             specialiteiten = reader.GetString(8);
                         }
-                        int profielid = -1;
+                        string profielnaam = string.Empty;
                         if (!reader.IsDBNull(9))
                         {
-                            profielid = reader.GetInt32(9);
+                            profielnaam = reader.GetString(9);
                         }               
-                        int specialisatieid = reader.GetInt32(10);
+                        string specialisatienaam = string.Empty;
+                        if (!reader.IsDBNull(10))
+                        {
+                            specialisatienaam = reader.GetString(10);
+                        }
                         
-                        Student student = new Student(studentid, email, wachtwoord, voornaam, achternaam, tussenvoegsel, studentnummer, leerjaar, specialiteiten, profielid, specialisatieid);
+                        Student student = new Student(studentid, email, wachtwoord, voornaam, achternaam, tussenvoegsel, studentnummer, leerjaar, specialiteiten, profielnaam, specialisatienaam);
                         students.Add(student);                        
                     }
                 }
