@@ -140,7 +140,7 @@
                         <p>2.09</p>
                             @foreach (Student student in Model)
                             {
-                                <input onclick="openPopup('@student.Voornaam', '@student.Achternaam', '@student.Leerjaar', '@student.ProfielID', '@student.SpecialisatieID', '@student.Specialiteiten' );" type="image" src="https://i.imgur.com/4L8zz6L.png">
+                                <input onclick="openPopup('@student.Voornaam', '@student.Tussenvoegsel', '@student.Achternaam', '@student.Leerjaar', '@student.ProfielID', '@student.SpecialisatieID', '@student.Specialiteiten' );" type="image" src="https://i.imgur.com/4L8zz6L.png">
                             }
 
                     </div>
@@ -187,8 +187,15 @@
             var span2 = document.getElementsByClassName("close")[1];
 
             // When the user clicks on the button, open the modal
-            function openPopup(naam, achternaam, jaar, profiel, specialisatie, specialiteit) {
-                document.getElementById('naam').innerHTML = naam + achternaam;
+            function openPopup(voornaam, tussenvoegsel, achternaam, jaar, profiel, specialisatie, specialiteit) {
+                if (tussenvoegsel != '')
+                {
+                    document.getElementById('naam').innerHTML = voornaam + ' ' + tussenvoegsel + ' ' + achternaam;
+                }
+                else
+                {
+                    document.getElementById('naam').innerHTML = voornaam + ' ' + achternaam;
+                }
                 document.getElementById('jaar').innerHTML = jaar;
                 document.getElementById('profiel').innerHTML = profiel;
                 document.getElementById('specialisatie').innerHTML = specialisatie;
