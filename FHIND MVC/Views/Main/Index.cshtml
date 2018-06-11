@@ -132,29 +132,17 @@
                     <button class="floorNr">4</button>
                 </div>
                 <div class="grid-container">
-                    <div class="classroom">
-                        <p>2.08</p>
+                    @foreach (Lokaal lokaal in Model)
+                    {
+                        <div class="classroom">
+                        <p>@lokaal.LokaalNummer</p>
+                        @foreach(Student student in lokaal.aanwezigeStudenten)
+                        {
+                            <input onclick="openPopup('@student.Voornaam', '@student.Tussenvoegsel', '@student.Achternaam', '@student.Leerjaar', '@student.ProfielNaam', '@student.SpecialisatieNaam', '@student.Specialiteiten' );" type="image" src="https://i.imgur.com/4L8zz6L.png">
+                        }                        
+                        </div>
 
-                    </div>
-                    <div class="classroom" id="class209">
-                        <p>2.09</p>
-                            @foreach (Student student in Model)
-                            {
-                                <input onclick="openPopup('@student.Voornaam', '@student.Tussenvoegsel', '@student.Achternaam', '@student.Leerjaar', '@student.ProfielNaam', '@student.SpecialisatieNaam', '@student.Specialiteiten' );" type="image" src="https://i.imgur.com/4L8zz6L.png">
-                            }
-                    </div>
-                    <div class="classroom">
-                        <p>2.10</p>
-                    </div>
-                    <div class="classroom">
-                        <p>2.11</p>
-                    </div>
-                    <div class="classroom">
-                        <p>2.12</p>
-                    </div>
-                    <div class="classroom">
-                        <p>2.13</p>
-                    </div>
+                    }
                 </div>
 
 

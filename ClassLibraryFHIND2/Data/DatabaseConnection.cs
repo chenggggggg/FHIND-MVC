@@ -99,5 +99,50 @@ namespace ClassLibraryFHIND.Data
 
             return students;
         }
-    }
+
+        public List<Student> getStudentsOfCurrentTime(List<Student> alleStudenten, string lokaalnummer)
+        {
+            DateTime currentTime = DateTime.Now;
+            List<Student> aanwezigeStudenten = new List<Student>();
+            aanwezigeStudenten = alleStudenten;
+
+            string query = "SELECT * FROM Student_vak";
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            try
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int StudentID = reader.GetInt32(0);
+                        int VakID = reader.GetInt32(1);
+                        DateTime VanTijd = reader.GetDateTime(2);
+                        DateTime TotTijd = reader.GetDateTime(3);
+                        string expectedlokaal = reader.GetString(4);
+
+                        foreach (Student s in aanwezigeStudenten.ToList())
+                        {
+                            if (s.StudentID == StudentID)
+                            {
+                                if ((currentTime < VanTijd && currentTime < TotTijd) || (currentTime > VanTijd && currentTime > TotTijd) || expectedlokaal != lokaalnummer)
+                                {
+                                    aanwezigeStudenten.Remove(s);
+                                }                                
+                            }
+                        }                      
+                                                                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            conn.Close();
+            return aanwezigeStudenten;
+        }
+        }
 }
