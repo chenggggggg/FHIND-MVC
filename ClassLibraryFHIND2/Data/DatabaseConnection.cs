@@ -10,9 +10,9 @@ namespace ClassLibraryFHIND.Data
     public class DatabaseConnection
     {
         //Calvin:
-        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Maatwerk\Freaky Day\FHIND MVC\FHIND MVC\App_Data\DatabaseFD.mdf;Integrated Security = True";
+        //private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Maatwerk\Freaky Day\FHIND MVC\FHIND MVC\App_Data\DatabaseFD.mdf;Integrated Security = True";
         //Kylie:
-        //private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kylie\Documents\Git\FHIND-MVC\Database\DatabaseFD.mdf;Integrated Security = True";
+        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kylie\Documents\Git\FHIND-MVC\Database\DatabaseFD.mdf;Integrated Security = True";
         private SqlConnection conn = new SqlConnection(connectionString);
 
         public int GetUserID(string email, string wachtwoord)
@@ -45,7 +45,7 @@ namespace ClassLibraryFHIND.Data
         {
             List<Student> students = new List<Student>();
 
-            string query = "SELECT Student.StudentID, Student.email, Student.wachtwoord, Student.voornaam, Student.achternaam, Student.tussenvoegsel, Student.studentnummer, Student.leerjaar, Student.specialiteiten, Profiel.ProfielNaam, Specialisaties.SpecialisatieNaam FROM Student INNER JOIN Profiel ON Student.ProfielID = Profiel.ProfielID INNER JOIN Specialisaties on Student.SpecialisatieID = Specialisaties.SpecialisatieID";
+            string query = "SELECT Student.StudentID, Student.email, Student.wachtwoord, Student.voornaam, Student.achternaam, Student.tussenvoegsel, Student.studentnummer, Student.leerjaar, Student.specialiteiten, Profiel.ProfielNaam, Specialisaties.SpecialisatieNaam FROM Student LEFT JOIN Profiel ON Student.ProfielID = Profiel.ProfielID LEFT JOIN Specialisaties on Student.SpecialisatieID = Specialisaties.SpecialisatieID";
 
             conn.Open();
 
